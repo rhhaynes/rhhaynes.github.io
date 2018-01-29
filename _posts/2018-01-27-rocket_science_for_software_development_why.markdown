@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "Rocket Science for Software Development...  Why?"
-date:       2018-01-27 17:50:48 +0000
+title:      "Trading Rocket Science for Software Development...  Why?"
+date:       2018-01-27 12:50:49 -0500
 permalink:  rocket_science_for_software_development_why
 ---
 
