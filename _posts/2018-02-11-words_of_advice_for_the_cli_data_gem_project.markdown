@@ -30,7 +30,7 @@ This form of *coding procrastination* allowed me to move forward without worryin
 ## When in doubt, check the gemspec
 Once I had my gem working as expected by running the bin/executable, I was disppointed to find that I could not call it from the command line.  After a few Google searches and trying various tweaks, I was able to narrow down the issue to a problem in my \*.gemspec file.  Although this file gets generated automatically by running `bundle gem <gem-name>`, there are a few modifications that must be made before the gem works from the command line and can be released.  Some of the changes are obvious and have lines that begin with `TODO`, however in my case the lines that required attention are shown below.
 
-`spec.bindir = "exe"`<pre></pre>
+`spec.bindir = "exe"` 
 `spec.executables = spec.files.grep(%r{^exe/}){|f| File.basename(f)}`
 
 Fortunately the fix was simple.  To get my gem working from the command line I simply needed to remove the `spec.bindir` line and edit the other to read `spec.executables = ["<gem-name>"]`.  As a reminder you also need to add your gem dependencies to this file using the command below.
