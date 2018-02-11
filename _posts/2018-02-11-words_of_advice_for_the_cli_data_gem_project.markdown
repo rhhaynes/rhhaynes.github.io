@@ -9,11 +9,13 @@ Upon reading the requirements for the first portfolio project, I was excited for
 
 ## Getting started is hard... or is it?
 I'm not going to lie, prior to this project I had taken the setup and helper files for granted.  Sure I knew what went into a Gemfile and why we needed to utilize an environments file, but the labs focus almost entirely on coding in the \*.rb files.  As such I found the blank terminal screen to be extremely daunting.
+
 * Where do I begin?
 * What files and directories should I create?
 * Is there a certain format or directory layout required for creating and publishing a gem?
 * How do I specify the version number?
 * What all goes in the \*.gemspec file?
+
 These are just a few of the questions that overwhelmed me at the beginning.  I knew if I had to search around online and look back through earlier labs I could figure them out, however it seemed like a considerable amount of up-front work at a time when all I really wanted to do was start coding.
 
 The solution to my dilemma:  `bundle gem <gem-name>`.
@@ -30,14 +32,14 @@ This form of *coding procrastination* allowed me to move forward without worryin
 ## When in doubt, check the gemspec
 Once I had my gem working as expected by running the bin/executable, I was disppointed to find that I could not call it from the command line.  After a few Google searches and trying various tweaks, I was able to narrow down the issue to a problem in my \*.gemspec file.  Although this file gets generated automatically by running `bundle gem <gem-name>`, there are a few modifications that must be made before the gem works from the command line and can be released.  Some of the changes are obvious and have lines that begin with `TODO`, however in my case the lines that required attention are shown below.
 
-`spec.bindir = "exe"` 
+`spec.bindir = "exe"`  
 `spec.executables = spec.files.grep(%r{^exe/}){|f| File.basename(f)}`
 
 Fortunately the fix was simple.  To get my gem working from the command line I simply needed to remove the `spec.bindir` line and edit the other to read `spec.executables = ["<gem-name>"]`.  As a reminder you also need to add your gem dependencies to this file using the command below.
 
-`spec.add_development_dependency`
+`spec.add_development_dependency "<gem-dependency>"`
 
 So in closing, if you're having problems that do not appear to be code related, check the \*.gemspec file!
 
 ## Shameless plug
-If interested, check out my gem by typing `gem install last_tweet` in the terminal (to install the gem) and then `last_tweet` to run it!  Without going into detail, the gem will return the most recent tweet from all specified Twitter handles.  Enjoy!
+If interested, check out my gem by typing `gem install last_tweet` in the terminal to install it and then `last_tweet` to run it!  Without going into detail, the gem will return the most recent tweet from all specified Twitter handles.  Enjoy!
