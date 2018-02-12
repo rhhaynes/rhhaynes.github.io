@@ -5,10 +5,10 @@ date:       2018-02-11 14:19:27 -0500
 permalink:  words_of_advice_for_the_cli_data_gem_project
 ---
 
-Upon reading the requirements for the first portfolio project, I was excited for the challenge.  While completing labs is fun, I knew nothing would compare to the satisfaction of writing a working program from start to finish.  Aside from setting my idea into action, one of my favorite parts of the experience was simply troubleshooting my gem prior to release (I had issues calling it from the command line).  Thus I've decided to share three pieces of advice I wish I'd known (explicitly) prior to beginning.
+Upon reading the requirements for the first portfolio project, I was excited for the challenge.  While completing labs is fun, I knew nothing would compare to the satisfaction of writing a working program from start to finish.  Aside from setting my idea into action, one of my favorite parts of the experience was simply troubleshooting the gem prior to release (I had issues calling it from the command line).  Thus I've decided to share three pieces of advice I wish I'd known (explicitly) prior to beginning.
 
 ## Getting started is hard... or is it?
-I'm not going to lie, prior to this project I had taken the setup and helper files for granted.  Sure I knew what went into a Gemfile and why we needed to utilize an environments file, but let's be honets, our labs primarily focus on coding in the \*.rb files.  As such I found the blank terminal screen to be extremely daunting.
+I'm not going to lie, prior to this project I had taken the setup and helper files for granted.  Sure I knew what went into a Gemfile and why we needed to utilize an environments file, but let's be honest, our labs primarily focus on coding in the \*.rb files.  As such I found the blank terminal screen to be extremely daunting.
 
 * Where do I begin?
 * What files and directories should I create?
