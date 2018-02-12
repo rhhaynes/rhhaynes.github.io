@@ -5,10 +5,10 @@ date:       2018-02-11 14:19:27 -0500
 permalink:  words_of_advice_for_the_cli_data_gem_project
 ---
 
-Upon reading the requirements for the first portfolio project, I was excited for the challenge.  While completing labs is fun, I knew nothing would compare to the satisfaction of writing a working program from start to finish.  Aside from setting my idea into action though, I realized one of my favorite parts of the experience was actually figuring out how to get the gem running as expected for publishing and installation .  Thus I've decided to share three pieces of advice I wish I'd known (explicitly) prior to beginning.
+Upon reading the requirements for the first portfolio project, I was excited for the challenge.  While completing labs is fun, I knew nothing would compare to the satisfaction of writing a working program from start to finish.  Aside from setting my idea into action, one of my favorite parts of the experience was simply troubleshooting my gem prior to release (I had issues calling it from the command line).  Thus I've decided to share three pieces of advice I wish I'd known (explicitly) prior to beginning.
 
 ## Getting started is hard... or is it?
-I'm not going to lie, prior to this project I had taken the setup and helper files for granted.  Sure I knew what went into a Gemfile and why we needed to utilize an environments file, but the labs focus almost entirely on coding in the \*.rb files.  As such I found the blank terminal screen to be extremely daunting.
+I'm not going to lie, prior to this project I had taken the setup and helper files for granted.  Sure I knew what went into a Gemfile and why we needed to utilize an environments file, but let's be honets, our labs primarily focus on coding in the \*.rb files.  As such I found the blank terminal screen to be extremely daunting.
 
 * Where do I begin?
 * What files and directories should I create?
@@ -27,7 +27,7 @@ If you've watched any of Avi's sample videos, I assume you've heard him use this
 
 `# code that accepts <something> and returns <something-else>`
 
-This form of *coding procrastination* allowed me to move forward without worrying at the moment about how such code would work.  What's more, in many cases the code I ended up writing was completely different than what I had initially intended, but that's the point.  There's no need to worry about the inner workings of code that you don't actually need yet.
+This form of *coding procrastination* allowed me to move forward without worrying at the moment about how such code would function.  What's more, in many cases the code I ended up writing was completely different than what I had initially intended, but that's the point.  There's no need to worry about the inner workings of code that you don't actually need yet.
 
 ## When in doubt, check the gemspec
 Once I had my gem working as expected by running the bin/executable, I was disppointed to find that I could not call it from the command line.  After a few Google searches and trying various tweaks, I was able to narrow down the issue to a problem in my \*.gemspec file.  Although this file gets generated automatically by running `bundle gem <gem-name>`, there are a few modifications that must be made before the gem works from the command line and can be released.  Some of the changes are obvious and have lines that begin with `TODO`, however in my case the lines that required attention are shown below.
