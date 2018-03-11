@@ -1,11 +1,11 @@
 ---
 layout: post
 title:      "Fun with Hash Defaults"
-date:       2018-03-11 17:43:42 +0000
+date:       2018-03-11 13:43:43 -0400
 permalink:  fun_with_hash_defaults
 ---
 
-For this blog post I've decided to demonstrate some cool tricks I've either used or seen online regarding hash default values.  In all cases a default value is defined by either passing an argument (example 1) or code block (examples 2 and 3) to the Hash contructor.  As you'll see, changing the default value to something other than ```nil``` can enable some very interesting and powerful tools.
+For this blog post I've decided to demonstrate some cool tricks I've either used or seen online regarding hash default values.  In all cases a default value is defined by either passing an argument (example 1) or code block (examples 2 and 3) to the Hash contructor.  As you'll see, changing the default value to something other than ```nil``` can provide for some very interesting and powerful tools.
 
 ### 1. Create histograms
 ```
