@@ -28,7 +28,7 @@ belongs_to :user
 belongs_to :destination
 ```
 
-Given this setup it should be apparent that a *many-to-many* relationship exists between the User and Destination models.  But why did we choose to define this relationship using a ```has_many :through``` approach which requires a separate join model (i.e., Travel)?  Especially when Rails offers a second and much simpler approach, ```has_and_belongs_to_many```, which only relies on a join table?
+Given this setup it should be apparent that a *many-to-many* relationship exists between the User and Destination models.  But why did we choose to define this relationship using a ```has_many :through``` approach which requires a separate join model (i.e., Travel)?  Especially when Rails offers a second and much simpler approach, ```has_and_belongs_to_many```, which only relies on the join table?
 
 ## Declaring many-to-many relationships
 To understand this decision we need only reference the helpful [Rails Guide](http://guides.rubyonrails.org/association_basics.html#choosing-between-has-many-through-and-has-and-belongs-to-many) which states:
