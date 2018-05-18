@@ -32,7 +32,8 @@ Given this setup it should be apparent that a *many-to-many* relationship exists
 
 ## Declaring many-to-many relationships
 To understand this decision we need only reference the helpful [Rails Guide](http://guides.rubyonrails.org/association_basics.html#choosing-between-has-many-through-and-has-and-belongs-to-many) which states:
->The simplest rule of thumb is that you should set up a **has_many :through** relationship if you need to work with the relationship model as an independent entity.  If you don't need to do anything with the relationship model, it may be simpler to set up a **has_and_belongs_to_many** relationship (though you'll need to remember to create the joining table in the database).
+
+> The simplest rule of thumb is that you should set up a **has_many :through** relationship if you need to work with the relationship model as an independent entity.  If you don't need to do anything with the relationship model, it may be simpler to set up a **has_and_belongs_to_many** relationship (though you'll need to remember to create the joining table in the database).
 
 So what does this mean?  Well in the context of MyTravels it means that we should use a ```has_many :through``` approach if the relationship model, in our case Travel, requires its own data or attributes.  And as it turns out, this is exactly our situation.
 
