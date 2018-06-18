@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "JavaScript Cheatsheet"
-date:       2018-06-18 03:01:46 +0000
+date:       2018-06-17 23:01:47 -0400
 permalink:  javascript_cheatsheet
 ---
 
@@ -44,7 +44,7 @@ for (const element of array){}
 for (const character of string){}
 ```
 ### Array methods
-In addition to the aforementioned loops, JS also provides methods specifically for iterating through Arrays.  A few of the crowd favorites are shown below, with ```map```, ```filter```, and ```reduce``` also being extremely useful for data manipulation.
+In addition to the aforementioned loops, JS also provides methods specifically for iterating through Arrays.  A few crowd favorites are shown below, with ```map```, ```filter```, and ```reduce``` also being extremely useful for data manipulation.
 
 ```javascript
 array.forEach( element => {} )
@@ -135,7 +135,7 @@ $(function(){
 });
 ```
 ## jQuery and AJAX
-Without going into detail, AJAX is a technique that enables data to be requested from a server and loaded into a page without having to refresh the entire page.  Additionally it uses an asynchronous processing model such that the browser does not need to wait for a response from the server, thus enabling a user to continue using the rest of a page while waiting for the server's response (data) to load.  As a brief overview, browsers use XMLHttpRequest objects to create AJAX requests, and when a server responds to the browser's requests the same objects are used to process the results.  Below are two patterns for performing AJAX requests plus a bonus technique specific only to Rails.
+Without going into detail, AJAX is a technique that enables data to be requested from a server and loaded into a page without having to refresh the entire page.  Additionally it uses an asynchronous processing model such that the browser does not need to wait for a response from the server.  This enables a user to continue using the rest of a page while waiting for the server's response (data) to load.  As a brief overview, browsers use XMLHttpRequest objects to create AJAX requests, and when a server responds to the browser's requests the same objects are used to process the results.  Below are two patterns for performing AJAX requests plus a bonus technique specific only to Rails.
 
 ### Client-side pattern
 Response is HTML, JSON, etc. to be loaded into the page.
