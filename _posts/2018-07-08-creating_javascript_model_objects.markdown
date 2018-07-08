@@ -1,11 +1,11 @@
 ---
 layout: post
 title:      "Creating JavaScript Model Objects"
-date:       2018-07-08 19:20:55 +0000
+date:       2018-07-08 15:20:56 -0400
 permalink:  creating_javascript_model_objects
 ---
 
-Given the requirement for utilizing JavaScript (JS) Model Objects in the rails app with a jQuery front end, I've decided to dedicate this blog post to reviewing the basics of objects and specifically how they're created.  In short, JS objects are standalone entities containing a collection of properties, i.e., name (*key*) / value associations.  The properties represent characteristics of the object and can be thought of as standard JS variables that are attached to the object.  If the property happens to be a function, it is referred to as a *method*.  Thus methods are simply functions that are associated with the object.  Method or not, all object properties are accessed via the dot-notation as shown below.  Lastly it should be noted that all unassigned properties of the object are *undefined*.
+Given the requirement for utilizing JavaScript (JS) Model Objects in the rails app with a jQuery front end, I've decided to dedicate this post to reviewing the basics of objects and specifically how they're created.  In short, JS objects are standalone entities containing a collection of properties, i.e., key (property name) / value associations.  The properties represent characteristics of the object and can be thought of as standard JS variables attached to the object.  If the property happens to be a function, it is referred to as a *method*.  Thus methods are simply functions that are associated with the object.  All object properties including methods are accessed via the dot-notation as shown below.  Lastly it should be noted that all unassigned properties of the object are *undefined*.
 ```javascript
 object.property
 ```
