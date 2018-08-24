@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "React-Redux Project:  EventMapper"
-date:       2018-08-24 13:28:11 +0000
+date:       2018-08-24 09:28:12 -0400
 permalink:  react-redux_project_eventmapper
 ---
 
@@ -12,7 +12,7 @@ As described in its documentation, `react-google-maps` provides a set of React c
 ```javascript
 npm install --save react-google-maps
 ```
-
+  
 ## Using react-google-maps
 Once the library is installed a [private API key](https://developers.google.com/maps/documentation/javascript/get-api-key) is required from Google before any maps can be rendered. The simplest way to include the key is by adding the following script to the header of the index.html file.
 ```html
@@ -47,7 +47,7 @@ class Map extends Component {
 
 export default Map;
 ```
-
+  
 ## Customizing the map component
 To customize the map with geolocation markers, the `Marker` component must be imported from `react-google-maps` and invoked with a `position` props as shown below. In this example the latitude and longitude coordinates correspond to the geolocation of Flatiron School. Happy coding!
 ```javascript
