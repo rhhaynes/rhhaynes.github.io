@@ -28,8 +28,8 @@ class Map extends Component {
   render() {
     const GoogleMapExample = withGoogleMap( props => (
       <GoogleMap
-        defaultZoom={2}
-        defaultCenter={{ lat: 26, lng: 0 }}
+        defaultZoom={ 2 }
+        defaultCenter={ { lat: 26, lng: 0 } }
       >
       </GoogleMap>
     ));
@@ -37,8 +37,8 @@ class Map extends Component {
     return(
       <div>
         <GoogleMapExample
-          containerElement={<div style={{ height: `575px`, width: `1000px` }} />}
-          mapElement={<div style={{ height: `100%` }} />}
+          containerElement={<div style={ { height: `575px`, width: `1000px` } } />}
+          mapElement={<div style={ { height: `100%` } } />}
         />
       </div>
     );
@@ -59,18 +59,18 @@ class Map extends Component {
   render() {
     const GoogleMapExample = withGoogleMap( props => (
       <GoogleMap
-        defaultZoom={2}
-        defaultCenter={{ lat: 26, lng: 0 }}
+        defaultZoom={ 2 }
+        defaultCenter={ { lat: 26, lng: 0 } }
       >
-        <Marker position={{ lat: 40.705283, lng: -74.014025 }} />
+        <Marker position={ { lat: 40.705283, lng: -74.014025 } } />
       </GoogleMap>
     ));
 
     return(
       <div>
         <GoogleMapExample
-          containerElement={<div style={{ height: `575px`, width: `1000px` }} />}
-          mapElement={<div style={{ height: `100%` }} />}
+          containerElement={<div style={ { height: `575px`, width: `1000px` } } />}
+          mapElement={<div style={ { height: `100%` } } />}
         />
       </div>
     );
