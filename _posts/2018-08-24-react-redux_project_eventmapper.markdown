@@ -12,6 +12,7 @@ As described in its documentation, `react-google-maps` provides a set of React c
 ```javascript
 npm install --save react-google-maps
 ```
+
   
 ## Using react-google-maps
 Once the library is installed a [private API key](https://developers.google.com/maps/documentation/javascript/get-api-key) is required from Google before any maps can be rendered. The simplest way to include the key is by adding the following script to the header of the index.html file.
@@ -37,8 +38,8 @@ class Map extends Component {
     return(
       <div>
         <GoogleMapExample
-          containerElement={<div style={ { height: `575px`, width: `1000px` } } />}
-          mapElement={<div style={ { height: `100%` } } />}
+          containerElement={ <div style={ { height: `575px`, width: `1000px` } } /> }
+          mapElement={ <div style={ { height: `100%` } } /> }
         />
       </div>
     );
@@ -47,6 +48,7 @@ class Map extends Component {
 
 export default Map;
 ```
+
   
 ## Customizing the map component
 To customize the map with geolocation markers, the `Marker` component must be imported from `react-google-maps` and invoked with a `position` props as shown below. In this example the latitude and longitude coordinates correspond to the geolocation of Flatiron School. Happy coding!
@@ -69,8 +71,8 @@ class Map extends Component {
     return(
       <div>
         <GoogleMapExample
-          containerElement={<div style={ { height: `575px`, width: `1000px` } } />}
-          mapElement={<div style={ { height: `100%` } } />}
+          containerElement={ <div style={ { height: `575px`, width: `1000px` } } /> }
+          mapElement={ <div style={ { height: `100%` } } /> }
         />
       </div>
     );
