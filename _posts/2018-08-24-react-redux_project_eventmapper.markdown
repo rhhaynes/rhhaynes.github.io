@@ -19,7 +19,7 @@ Once the library is installed a [private API key](https://developers.google.com/
 <script src="https://maps.googleapis.com/maps/api/js?key=PRIVATE_API_KEY"></script>
 ```
 At this point a blank map can be displayed using the generic map component below.
-```javascript
+```
 import React, { Component } from 'react';
 import { withGoogleMap, GoogleMap } from 'react-google-maps';
 
@@ -50,24 +50,31 @@ export default Map;
   
 ## Customizing the map component
 To customize the map with geolocation markers, the `Marker` component must be imported from `react-google-maps` and invoked with a `position` props as shown below. In this example the latitude and longitude coordinates correspond to the geolocation of Flatiron School. Happy coding!
-```javascript
+```
 import React, { Component } from 'react';
 import { withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
 
 class Map extends Component {
 
-render() {
-const GoogleMapExample = withGoogleMap( props => (
-<GoogleMap defaultZoom={2} defaultCenter={{ lat: 26, lng: 0 }}>
-<Marker position={{ lat: 40.705283, lng: -74.014025 }} />
-</GoogleMap>));
+  render() {
+    const GoogleMapExample = withGoogleMap( props => (
+      <GoogleMap
+        defaultZoom={2}
+        defaultCenter={{ lat: 26, lng: 0 }}
+      >
+        <Marker position={{ lat: 40.705283, lng: -74.014025 }} />
+      </GoogleMap>
+    ));
 
-return(
-<div>
-<GoogleMapExample
-containerElement={<div style={{ height: `575px`, width: `1000px` }} />} mapElement={<div style={{ height: `100%` }} />}/>
-</div>);
-}
+    return(
+      <div>
+        <GoogleMapExample
+          containerElement={<div style={{ height: `575px`, width: `1000px` }} />}
+          mapElement={<div style={{ height: `100%` }} />}
+        />
+      </div>
+    );
+  }
 };
 
 export default Map;
