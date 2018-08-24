@@ -9,11 +9,10 @@ For the React-Redux project I decided to build a data-viewing application by int
 
 ## Installing react-google-maps
 As described in its documentation, `react-google-maps` provides a set of React components that wrap the underlying instances of Google Maps JavaScript API v3. For the purposes of this app, such wrappers enable the rendering of Google Maps with basic functionality (zoom, roadmap and satellite views, etc.), the overlay of geolocation data on the map in the form of polylines and markers, and the addition of pop-up, information windows to clarify the data. To actually install the library use the following command.
-```javascript
+```
 npm install --save react-google-maps
 ```
 
-  
 ## Using react-google-maps
 Once the library is installed a [private API key](https://developers.google.com/maps/documentation/javascript/get-api-key) is required from Google before any maps can be rendered. The simplest way to include the key is by adding the following script to the header of the index.html file.
 ```html
@@ -49,7 +48,6 @@ class Map extends Component {
 export default Map;
 ```
 
-  
 ## Customizing the map component
 To customize the map with geolocation markers, the `Marker` component must be imported from `react-google-maps` and invoked with a `position` props as shown below. In this example the latitude and longitude coordinates correspond to the geolocation of Flatiron School. Happy coding!
 ```
