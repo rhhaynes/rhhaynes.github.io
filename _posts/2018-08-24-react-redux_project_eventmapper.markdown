@@ -25,24 +25,24 @@ import { withGoogleMap, GoogleMap } from 'react-google-maps';
 
 class Map extends Component {
 
-   render() {
-      const GoogleMapExample = withGoogleMap( props => (
-         <GoogleMap
-            defaultZoom={2}
-            defaultCenter={{ lat: 26, lng: 0 }}
-         >
-         </GoogleMap>
-      ));
+  render() {
+    const GoogleMapExample = withGoogleMap( props => (
+      <GoogleMap
+        defaultZoom={2}
+        defaultCenter={{ lat: 26, lng: 0 }}
+      >
+      </GoogleMap>
+    ));
 
-      return(
-         <div>
-            <GoogleMapExample
-               containerElement={<div style={{ height: `575px`, width: `1000px` }} />}
-               mapElement={<div style={{ height: `100%` }} />}
-            />
-         </div>
-      );
-   }
+    return(
+      <div>
+        <GoogleMapExample
+          containerElement={<div style={{ height: `575px`, width: `1000px` }} />}
+          mapElement={<div style={{ height: `100%` }} />}
+        />
+      </div>
+    );
+  }
 };
 
 export default Map;
@@ -56,25 +56,18 @@ import { withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
 
 class Map extends Component {
 
-   render() {
-      const GoogleMapExample = withGoogleMap( props => (
-         <GoogleMap
-            defaultZoom={2}
-            defaultCenter={{ lat: 26, lng: 0 }}
-         >
-            <Marker position={{ lat: 40.705283, lng: -74.014025 }} />
-         </GoogleMap>
-      ));
+render() {
+const GoogleMapExample = withGoogleMap( props => (
+<GoogleMap defaultZoom={2} defaultCenter={{ lat: 26, lng: 0 }}>
+<Marker position={{ lat: 40.705283, lng: -74.014025 }} />
+</GoogleMap>));
 
-      return(
-         <div>
-            <GoogleMapExample
-               containerElement={<div style={{ height: `575px`, width: `1000px` }} />}
-               mapElement={<div style={{ height: `100%` }} />}
-            />
-         </div>
-      );
-   }
+return(
+<div>
+<GoogleMapExample
+containerElement={<div style={{ height: `575px`, width: `1000px` }} />} mapElement={<div style={{ height: `100%` }} />}/>
+</div>);
+}
 };
 
 export default Map;
