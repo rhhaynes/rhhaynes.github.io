@@ -1,14 +1,14 @@
 ---
 layout: post
 title:      "Serializing Deeply Nested Associations"
-date:       2018-09-17 03:41:33 +0000
+date:       2018-09-16 23:41:33 -0400
 permalink:  serializing_deeply_nested_associations
 ---
 
 While it's generally preferred to keep data layers as shallow as possible, at some point when building APIs it may be necessary to include attributes spanning multiple relationships and levels.  Unfortunately the default nesting for `json` with `active_model_serializers` in `Rails` is only one layer.  This blog post aims to address this issue by exploring a couple ways to serialize deeply nested associations.
 
 ## Single-layer nesting by default
-To illustrate the problem, imagine an API that provides geolocation data (i.e., latitutde and longitude values) for hurricanes.  In addition to actual hurricane positions, a user may be interested in the geolocations of all associated forecasts, or *spaghetti models*.  Behind the scenes, one way to persist and associate such information might be as follows.
+To illustrate the problem, imagine an API that provides geolocation data (i.e., latitutde and longitude values) for hurricanes.  In addition to actual hurricane positions, a user may be interested in the geolocations of all associated forecasts, or *spaghetti models*.  Behind the scenes one way to handle such information might be as follows.
 ```ruby
 class ApplicationRecord < ActiveRecord::Base
   self.abstract_class = true
@@ -54,7 +54,7 @@ end
 ```
 
 Unfortunately using this setup our API output looks as follows for the 2018 Atlantic hurricane season.  As you can see, no geolocation data is contained under `spaghetti_models`.
-```json
+```
 [
   {
     "name": "Hurricane Florence",
@@ -68,7 +68,7 @@ Unfortunately using this setup our API output looks as follows for the 2018 Atla
 
 ## Deeply nested serializations
 To achieve the desired API output shown below, one of the following two approaches can be taken.
-```json
+```
 [
   {
     "name": "Hurricane Florence",
@@ -98,7 +98,7 @@ ActiveModel::Serializer.config.default_includes = '**' # (default '*')
 It should be noted that problems with infinite recursion can occur using this approach unless care is taken.
 
 ### Customizing serializer behavior
-A safer approach to achieving the desired result involves disregarding the `has_many`, `belongs_to` associations in the serializer and defining the collection of nested attributes directly.  In this way the serializer behavior can be customized to provide select attributes.
+A safer approach to achieving the desired nesting depth involves disregarding the `has_many`, `belongs_to` relationships in the serializer and defining the nested associations directly.  In this way the serializer behavior can be customized to provide select attributes.
 ```ruby
 class SpaghettiModelSerializer < ActiveModel::Serializer
   attributes :name, :geolocations
